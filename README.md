@@ -2,7 +2,10 @@
 SPREE, PLEASE CONSULT THAT BRANCH'S README AND NOT THIS ONE.**
 
 SUMMARY
--------
+------------------------------------------------------------
+gh remote is pointing to github
+origin to bitbucket
+-----------------------------------------------------------
 
 
 Spree is a complete open source e-commerce solution built with Ruby on Rails.  It was originally developed by Sean Schofield

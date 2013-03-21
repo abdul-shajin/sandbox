@@ -64,7 +64,7 @@ var handle_delete = function(e, data){
       $.ajax({
         type: "POST",
         dataType: "json",
-        url: base_url + node.attr("id"),
+        url: base_url + '/' + node.attr("id"),
         data: ({_method: "delete", authenticity_token: AUTH_TOKEN}),
         error: handle_ajax_error
       });
@@ -174,7 +174,7 @@ var setup_taxonomy_tree = function(taxonomy_id) {
                     edit: {
                       separator_before: true,
                       label: "<i class='icon-edit'></i> " + Spree.translations.edit,
-                      action: function (obj) { window.location = base_url + obj.attr("id") + "/edit/"; }
+                      action: function (obj) { window.location = base_url + '/' + obj.attr("id") + "/edit/"; }
                     }
                   }
                 }

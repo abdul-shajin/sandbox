@@ -4,7 +4,16 @@
     <%#= taxons_tree(taxonomy.root, @taxon, Spree::Config[:max_level_in_taxons_menu] || 1) %>
   <%# end %>
 </nav>-->
-<% gt = get_taxonomies %>
-<%= select('taxon','taxonomy_id',get_taxonomies.collect {|m| [m.root.name, m.root.permalink,{"data-tid" => m.root.id}] }, {:include_blank => true }) %>
-<div id='taxonomy_filter'></div>
-<br />
+<% if params[:controller].eql?("spree/taxons") && params[:action].eql?("show") %>
+  <% if @parents %>
+    <% @parents.each do |parent| %>
+      <%= select('taxon',"taxonomy_id", parent.self_and_siblings.collect{|m| [m.name,m.permalink,{"data-tid" => m.id}]}, {include_blank: true},{style: 'width:200px;'}) %>
+    <% end %> 
+  <% end %>
+  <%= select('taxon','taxonomy_id', @taxon.self_and_siblings.collect{|m| [m.name,m.permalink,{"data-tid" => m.id}]}, {include_blank: true},{style: 'width:200px;'}) %>
+
+<% else %>
+  <%= select('taxon','taxonomy_id',get_taxonomies.collect {|m| [m.root.name, m.root.permalink,{"data-tid" => m.root.id}] },{},{style: 'width:200px;'} ) %>
+  <div id='taxonomy_filter'></div>
+  <br />
+<% end %>

@@ -25,13 +25,15 @@ module Spree
     def access_child_dropdown
       taxon = Taxon.find(params[:t_id])
       @children = taxon.children.select([:id,:name,:permalink]) if taxon
-      if @children
-        respond_to do |format|
+      respond_to do |format|
+        if !@children.empty?
           format.html { render :nothing => true ,:status => 201 }
           format.json { render :json => @children}
-        end
-      else
-        render :nothing => true , :status => 422
+        else
+          format.html { render nothing: true, status: 201}
+          format.json { render :json => ['last_node',taxon.id]}
+          #render :nothing => true , :status => 422
+        end  
       end  
     end
 

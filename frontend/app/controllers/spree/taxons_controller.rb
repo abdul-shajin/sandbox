@@ -20,6 +20,7 @@ module Spree
       @searcher.current_user = try_spree_current_user
       @searcher.current_currency = current_currency
       @products = @searcher.retrieve_products
+      render layout: 'main'
     end
 
     def access_child_dropdown

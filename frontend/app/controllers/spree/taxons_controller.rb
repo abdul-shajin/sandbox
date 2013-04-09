@@ -38,6 +38,23 @@ module Spree
       end  
     end
 
+    def filter_group
+      #a Click to taxons will reach here
+      #clicked taxon parent will be hidden by this group
+      #clicked taxon will be in the top as selected
+      @taxon = Taxon.find_by_permalink!(params[:id])
+      @selected_taxons = Taxon.where(:id => params[:perm])
+      #@relevent_taxons = (@taxon.children - @selected_taxons.map(&:parent))
+      @rules = []
+      @selected_taxons.each do |taxon|
+        rule_hash = Rule::RULES[taxon.parent.permalink]
+        @rules << rule_hash unless rule_hash.nil? 
+      end
+      @rules.flatten!
+      @products = Product.in_taxons(@selected_taxons)
+      render layout: 'main'
+    end
+
     private
       def accurate_title
         @taxon ? @taxon.name : super

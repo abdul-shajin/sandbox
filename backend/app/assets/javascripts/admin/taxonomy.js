@@ -144,7 +144,7 @@ var setup_taxonomy_tree = function(taxonomy_id) {
                     edit : {
                       separator_before: true,
                       label: "<i class='icon-edit'></i> " + Spree.translations.edit,
-                      action           : function (obj) { window.location = base_url + obj.attr("id") + "/edit/"; }
+                      action           : function (obj) { window.location = admin_base_url + '/' + obj.attr("id") + "/edit/"; }
                     }
                   }
                 } else {
@@ -174,7 +174,7 @@ var setup_taxonomy_tree = function(taxonomy_id) {
                     edit: {
                       separator_before: true,
                       label: "<i class='icon-edit'></i> " + Spree.translations.edit,
-                      action: function (obj) { window.location = base_url + '/' + obj.attr("id") + "/edit/"; }
+                      action: function (obj) { window.location = admin_base_url + '/' + obj.attr("id") + "/edit/"; }
                     }
                   }
                 }

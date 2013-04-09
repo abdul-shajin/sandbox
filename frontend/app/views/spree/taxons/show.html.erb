@@ -1,19 +1,28 @@
-<h1 class="taxon-title"><%= @taxon.name %></h1>
+<h1 class="taxon-title"><%#= accurate_title %></h1>
 
-<% content_for :sidebar do %>
+<%# content_for :sidebar do %>
   <div data-hook="taxon_sidebar_navigation">
-    <%= render :partial => 'spree/shared/taxonomies' %>
-    <%= render :partial => 'spree/shared/filters' if @taxon.children.empty? %>
+    <%#= render :partial => 'spree/shared/taxonomies' if @taxon.children.empty? %>
+    <%#= render :partial => 'spree/shared/filters' %>
   </div>
-<% end %>
+<%# end %>
 
 <div data-hook="taxon_products">
-  <%= render :partial => 'spree/shared/products', :locals => { :products => @products, :taxon => @taxon } %>
+  <%#= render :partial => 'spree/shared/products', :locals => { :products => @products, :taxon => @taxon } %>
 </div>
 
-<% unless params[:keywords].present? %>
+<%# unless params[:keywords].present? %>
   <div data-hook="taxon_children">
-    <%= render :partial => 'taxon', :collection => @taxon.children %>
+    <%#= render :partial => 'taxon', :collection => @taxon.children %>
   </div>
-<% end %>
+<%# end %>
+    <div class="container-fluid">
+        <div class="container">        
+            <div class="row">
+                <%= render partial: 'shared/product_filters' %>
+                <%= render partial: 'shared/helpdesk_desc' %>
+            </div><!--/row-->
+            <div class="finalspace"></div>
+        </div>
+    </div>
 

@@ -1,0 +1,127 @@
+<%= provide(:title, 'Contact SupportSages') %>
+<%= provide(:center_header, 'Contact Us') %>
+        <div class="container">
+            <div class="row">
+                <?php include 'process-form.php'; ?>            
+                <div class="wrapper clearfix">
+                    <div id="contact-wrapper" class="clearfix formframe">
+                        <div class="form-wrapper clearfix span6">
+                            <div class="message">
+                                <?php echo !empty($error_list) ? $error_list : ''; ?>
+                            </div>
+                            <form id="contact-form" action="#" method="post" novalidate>
+                                <fieldset>
+                                    <div class="field">
+                                        <label for="name">Name</label>
+                                        <input type="text" id="name" name="name" autofocus required
+                                               title="Your first and last name">
+                                    </div>
+                                    <div class="field">
+                                        <label for="email">Email</label>
+                                        <input type="email" id="email" name="email" required 
+                                               title="We will respond to this address">
+                                    </div>
+                                    <div class="field">
+                                        <label for="phone">Phone</label>
+                                        <input type="text" id="phone" name="phone" title="If you prefer a phone call">
+                                    </div>
+                                    <div class="field">
+                                        <label for="message">Message</label>
+                                        <textarea id="message" name="message" cols="15" rows="5" required></textarea>
+                                    </div>
+                                    <div class="field submit">
+                                        <input type="submit" value="Submit"/>
+                                    </div>
+                                    <div class="field reset">
+                                        <input type="reset" value="Reset"/>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div><!--form-wrapper-->
+                        <div class="address-wrapper clearfix span6">
+                            <div class="row">
+                                <div id="map-outer">
+                                    <div id="map">&nbsp;</div>
+                                </div>
+                                <a href="#" class="get-directions-button" rel="#map-overlay">Get Directions</a>
+                            </div>
+                            <div id="social-media" class="row">
+                                <div class="media-contact"><%=image_tag('store/blue_facebook.png',alt:'facebook') %><span>sagesfacebook</span></div>
+                                <div class="media-contact"><%= image_tag('store/blue_twitter.png',alt:'twitter') %><span>sagestwitter</span></div>
+                            </div>
+                        </div><!--address-wrapper-->
+                    </div><!--contact-wrapper-->
+                </div><!--wrapper-->
+                <span id="company-street-address"><?php echo $company_address;?></span>
+            </div>
+        </div>
+    <div class="container">
+        <div class="row">
+            <div class="span6">
+                <div class="contact-add row">
+                    <ul>
+                        <li><span class="pull-left capz">telephone</span><span class="pull-right small">0091-999 549 7704<br>0091-484 405 8194</span></li>
+                        <li>
+                            <span class="pull-left capz top-m">address</span>
+                            <span class="pull-right small address">
+                                Door No 27/605D<br>
+                                Edapally Toll<br>
+                                Pookkattupady Road<br>
+                                Edapally P.O.<br>
+                                Kochi - 682024<br>
+                                Kerala, India<br>
+                            </span>
+                        </li>
+                        <li><span class="pull-left capz email">email</span><span class="pull-right small emailid">sales@supportsages.com</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="span6">
+                <div class="financial-info row"> 
+                    <div>
+                        <span class="capz">Financial info</span><br><br>
+                        <span class="pull-left">
+                            SupportSages<br>
+                            15122000000443 <br>
+                            HDFC Bank <br>
+                            Kaloor<br>
+                            HDFCINBBXXX
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="final"></div>
+    
+    <div class="container-fluid otherfooterbg">
+        <div class="container">
+            <div class="row">
+                <div id="footer_navigation">
+                    <div class="span12">
+                        <ul class="nav nav-pills">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Advanced Search</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Get a Quote</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a id="sitemap" href="#">Sitemap</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div>
+                    <p id="copyright" class="c12 left">
+                        CopyRight © 2012 <a href="#">SupportSages</a>. 
+                        All Rights Reserved. All trademarks are property of their respective holders.
+                    </p>
+                </div>  
+            </div>
+        </div>
+    </div>

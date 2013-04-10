@@ -1,0 +1,269 @@
+@charset "utf-8";
+/* CSS Document */
+
+#navigation
+{
+	/*margin-left:50px;*/
+	margin-top:0px;
+	margin-bottom:0px;
+	line-height: 100%;
+	padding:0px;
+}
+#navigation li {
+	margin: 0px;
+	padding: 0px;
+	float: left;
+	position: relative;
+	list-style: none;
+}
+
+#navigation #home_menu 
+{
+	color: #FFFFFF;
+    display: block;
+    font-size: 22px;
+    margin: 2px 0 0;
+    padding: 12px 24px;
+    text-decoration: none;
+}
+#navigation #helpdesk_support_menu
+{
+	color:#fff;
+	font-size:22px;
+	text-decoration: none;
+	display: block;
+	margin: 0;
+	margin-top:2px;
+	padding: 14px 10px;
+}
+#navigation #server_management_menu
+{
+	color:#fff;
+	font-size:22px;
+	text-decoration: none;
+	display: block;
+	margin: 0;
+	margin-top:2px;
+	padding-bottom:14px;
+	padding-top:14px;
+	padding-left:24px;
+	padding-right:24px;
+}
+#navigation #hire_a_sage_menu
+{
+	color:#fff;
+	font-size:22px;
+	text-decoration: none;
+	display: block;
+	margin: 0;
+	margin-top:2px;
+	padding-bottom:14px;
+	padding-top:14px;
+	padding-left:24px;
+	padding-right:24px;
+}
+#navigation #focus_areas_menu
+{
+	color:#fff;
+	font-size:22px;
+	text-decoration: none;
+	display: block;
+	margin: 0;
+	margin-top:2px;
+	padding-bottom:14px;
+	padding-top:14px;
+	padding-left:24px;
+	padding-right:24px;
+}
+#navigation #corporate_menu
+{
+	color:#fff;
+	font-size:22px;
+	text-decoration: none;
+	display: block;
+	padding-bottom:14px;
+	padding-top:14px;
+	padding-left:24px;
+	padding-right:24px;
+	margin: 0;
+	margin-top:2px;
+}
+
+/*.arrow
+{
+	background:url(store/nav_a_arrow.png) no-repeat center;
+	height:16px;
+	z-index:999;
+}
+
+*/#navigation #helpdesk_support_menu:hover
+{
+	background:image-url("store/nav_a_arrow.png") no-repeat center bottom;
+}
+
+#navigation li .nav_a_bg_color:hover 
+{
+	background: #015d9a !important;
+}
+
+#navigation ul 
+{
+	margin-top:0px;
+	background:image-url("store/nav_a_bg.jpg");
+	position:absolute;
+	display: none;
+	padding: 0;
+	width: 925px;
+	margin-left:-100px;
+	z-index:999;
+	border-bottom:4px solid #414242;
+	border-top:2px solid #f7f7f7;
+	height: 330px;
+}
+#navigation li:hover > ul {
+	display: block;
+}
+#navigation ul li {
+	float: none;
+	margin: 0;
+	padding: 0;
+}
+
+
+#navigation #server_management_drop_page
+{
+	background: image-url("store/nav_a_bg.jpg") repeat scroll 0 0 transparent;
+    display: none;
+    height: 330px;
+    margin-left: -273px;
+    margin-top: 0;
+    padding: 0;
+    position: absolute;
+    width: 925px;
+    z-index: 999;
+}
+#navigation #server_management_drop_page a
+{
+	text-decoration:none;
+}
+#navigation li:hover > #server_management_drop_page {
+	display: block;
+}
+#navigation #server_management_drop_page li {
+	float: none;
+	margin: 0;
+	padding: 0;
+}
+#navigation #hire_a_sage_drop_page
+{
+	background: image-url("store/nav_a_bg.jpg") repeat scroll 0 0 transparent;
+    border-top: 2px solid #F7F7F7;
+    display: none;
+    height: 330px;
+    margin-left: -493px;
+    margin-top: 0;
+    padding: 0;
+    position: absolute;
+    width: 925px;
+    z-index: 999;
+}
+
+#navigation #hire_a_sage_drop_page a
+{
+	text-decoration:none;
+}
+#navigation #helpdesk_support_drop_page a
+{
+	text-decoration:none;
+}
+
+#navigation li:hover > #hire_a_sage_drop_page {
+	display: block;
+}
+#navigation #hire_a_sage_drop_page li {
+	float: none;
+	margin: 0;
+	padding: 0;
+}
+#navigation #focus_areas_drop_page
+{
+	background: image-url("store/nav_a_bg.jpg") repeat scroll 0 0 transparent;
+    display: none;
+    height: 330px;
+    margin-left: -640px;
+    margin-top: 0;
+    padding: 0;
+    position: absolute;
+    width: 925px;
+    z-index: 999;
+}
+#navigation #focus_areas_drop_page a
+{
+	text-decoration:none;
+}
+#navigation li:hover > #focus_areas_drop_page {
+	display: block;
+}
+#navigation #focus_areas_drop_page li {
+	float: none;
+	margin: 0;
+	padding: 0;
+}
+#navigation #corporate_drop_page
+{
+	margin-top:0px;
+	background:image-url("store/nav_a_bg.jpg");
+	position:absolute;
+	display: none;
+	padding: 0;
+	width: 925px;
+	margin-left: -794px;
+	z-index:999;
+	height: 330px;
+}
+#navigation #corporate_drop_page a
+{
+	text-decoration:none;
+}
+#navigation li:hover > #corporate_drop_page {
+	display: block;
+}
+#navigation #corporate_drop_page li {
+	float: none;
+	margin: 0;
+	padding: 0;
+}
+#navigation:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+html[xmlns] #nav {
+	display: block;
+}
+* html #nav {
+	height: 1%;
+}
+
+.nav_bg
+{
+	background:image-url("store/nav_bg.jpg");
+	height:46px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<title><%= yield(:title) %></title>
+<meta name="description" content="Welcome to SupportSages">
+
+<%= stylesheet_link_tag 'application_main', media: 'all' %>
+<%= javascript_include_tag 'application_main' %>
+</head>
+
+  <body>
+    <div class="wrapper">
+      <%= render partial: 'shared/header_part' %>
+      <div class="container-fluid">
+          <div class="container">
+              <div class="row">
+                  <div class="span12">
+                      <div class="qoutes">
+                          <span id="left_qoute_img"><%=image_tag 'store/left_qoute.png'%></span>
+                          <p id="first_line-qoute">The secret of joy in work is contained in one word<span id="excellence">- excellence.</span></p>
+                          <p>To know how to do something well is <span id="to_enjoy_it">to enjoy it</span></p>
+                          <span id="right_qoute-img"><%= image_tag 'store/right_qoute.png'%></span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+        
+      <%= render partial: 'shared/center_header' %>
+
+      <%= yield %>  
+      <%= render partial:'shared/footer_part' %>
+    </div><!--/wrapper-->
+  </body>
+</html>

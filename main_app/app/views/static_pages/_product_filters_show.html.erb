@@ -1,0 +1,19 @@
+                <div class="span3">
+                    <h4 id="serviceoption">SERVICE OPTIONS</h4>
+                    <div id="service-accordian">
+                        <% Spree::Taxon.root.children.each_with_index do |taxon,i| %>
+                        <button type="button" class="btn btn-danger acc-heading" data-toggle="collapse" data-target="#demo<%= i %>" <%='disabled' %>><%= taxon.name %></button>
+                            <div id="demo<%= i %>" class="collapse in acco-inne">
+                            <% taxon.children.each_with_index do |sub_taxon,i| %>
+                            <p class=<%= "top-mar" if i == 0%>>
+                                <% if params[:perm] %>
+                                <%= link_to sub_taxon.name , '#',data: {id: sub_taxon.id, stat:'to_update'} %>
+                                <% else %>
+                                <%= link_to sub_taxon.name, "/filter_group/#{Spree::Taxon.root.permalink}?perm[]=#{sub_taxon.id}" %>
+                                <% end %>
+                            </p>
+                            <% end %>
+                        </div>
+                        <% end %>
+                    </div>
+                </div>

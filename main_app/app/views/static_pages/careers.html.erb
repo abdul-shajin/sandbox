@@ -1,0 +1,414 @@
+<%= provide(:title, 'Careers Page') %>
+<%= provide(:center_header, 'Current Openings') %>
+<div class="container-fluid current_openings_sub_items_bg">
+        <div class="container">
+            <div class="row">
+                <div class="span6">
+                    <div id="current_openings_sub_items">
+                        <p id="junior_system_admin"><a href="#junior_system_administrator">Junior System Administrator</a></p>
+                        <div class="current_openings_sub_items_border"></div>
+                        <p id="sub_items"><a href="#webdesigner_coder">Web Designer & Coder</a></p>
+                        <div class="current_openings_sub_items_border"></div>
+                        <p id="sub_items">
+                            <a href="#linux_system_administrator">Linux System Administrator - Level III / Guru Level</a>
+                        </p>
+                        <div class="linux_system_border"></div>
+                        <p id="sub_items"><a href="#senior_technical_support">Senior Technical Support Engineer</a></p>
+                        <div class="senior_engineer_border"></div>
+                        <p id="sub_items"><a href="#">Ruby Developer</a></p>
+                        <div class="current_openings_sub_items_border"></div>
+                    </div>
+                </div>
+                
+                <div class="span6">
+                    <div id="what_we_expect_from_you">
+                        <%= image_tag('store/what_we_expectom_you.png',id:'what_we_expect_from_you_bg') %>
+                        <div id="what_we_expect_left_shadow"></div>
+                        <div id="what_we_expectom_you_content_bg"></div>
+                        <div id="what_we_expect_right_shadow"></div>
+                        <div id="what_we_expect_bt_lt_sh"></div>
+                        <div id="what_we_expect_bt_rt_sh"></div>
+                        <p id="what_we_expect_from_you_h">What we expect from you</p>
+                        <p id="expect_first_line">Ability to handle English language as if it is your first language</p>
+                        <div class="expect_border"></div>
+                        <p id="expect_other_lines">Flexible, takes complete ownership and is proactive in every aspect</p>
+                        <div class="expect_border"></div>
+                        <p id="expect_other_lines">Caring and no bossy attitude.</p>
+                        <div class="expect_border"></div>
+                        <p id="expect_other_lines">Willingness to share your knowledge with your colleagues</p>
+                        <div class="expect_border"></div>
+                        <p id="expect_other_lines">Passion to excel in whatever you do / must be tech savvy</p>
+                        <div class="expect_border"></div>
+                        <p id="expect_other_lines">Creative thinking and ability to 'think outside the box' are ESSENTIAL</p>
+                        <div class="expect_border"></div>
+                        <p id="expect_other_lines">One who dares to speak the truth</p>
+                        <div class="expect_border"></div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="row">
+            <div id="registration">
+                <div id="already_reg"><p id="registered"><a href="#">Already Registered?</a></p></div>
+                <div id="login">
+                    <button id="login_btt">Login</button>
+                    <div id="login_hidden" class="login_bg">
+                        <input id="text" type="text" placeholder="Username">
+                        <input id="pwd" type="password" placeholder="Password">
+                        <button id="login_in">Login</button>
+                        <p id="forgot_pwd"><a href="#">Forgot Password</a></p>
+                    </div>
+                </div>
+                <div id="here_sign">
+                    <p class="left"><a href="#">Registered</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="row">
+            <div class="span12">
+                <div id="career-tab">
+                    <ul id="career-tab-ul" class="nav nav-tabs">
+                        <li><a class="active" href="#currentopenings" data-toggle="tab">Current Openings</a></li>
+                        <li><a href="#how-we-hire" data-toggle="tab">How We Hire</a></li>
+                        <li><a href="#how-to-apply" data-toggle="tab">How to Apply</a></li>
+                        <li><a href="#how-to-reach" data-toggle="tab">How to Reach</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane active pull-left" id="currentopenings">
+                            <div id="currentopenings">
+                                <div class="row">
+                                    <div class="span5">
+                                        <div id="system_social_p">
+                                            <p id="junior_p">Junior</p>
+                                            <p>System Administrator</p>
+                                            <div id="social_j_sm_admin" class=" pull-left">
+                                                <%=link_to image_tag('store/facebook_tab.png',alt:'facebook',class:'left'),'#'%>
+                                                <%=link_to image_tag('store/twitter_tat.png',alt:'twitter',class:'left'),'#'%>
+                                                <%=link_to image_tag('store/in_tab.png',alt:'in',class:'left'),'#'%>
+                                                <%=link_to image_tag('store/mail_tab.png',alt:'mail',class:'left'),'#'%>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="span7">
+                                        <div id="systemadmin-right" class="content-right">
+                                            <p>We are inviting fresh Engineering and MCA graduates with passion for Linux to build 
+                                            their career with our fast growing company</p>
+                                        </div>
+                                        <div class="liked_in pull-left">
+                                            <%=link_to image_tag('store/linkedin.png',alt:'linkedin'),'#'%>
+                                            <p>Get hired faster</p>
+                                        </div>
+                                    </div><!--/span7-->
+                                </div>
+                                <div class="row">
+                                    <div class="span12">
+                                        <div class="accordion-group accordianframe">
+                                            <div class="accordion-heading apply_plus">
+                                                <a class="accordion-toggle" data-parent="#my_accordion" data-toggle="collapse" href="#collapse1">
+                                                <span class=" plus_bg pull-right">+</span>
+                                                <%= image_tag('store/applynow_tab.png',alt:'applynow',class:'pull-right')%></a>
+                                            </div>
+                                            <div class="accordion-body collapse accordian-sub" id="collapse1">
+                                                <div class="accordion-inner  accordian-content">
+                                                    <div class="responsibilities" class="list">
+                                                        <h4>Responsibilities</h4> 
+                                                        <ul class="list_ul">
+                                                            <li>The responsibilities include but not limited to the following </li>
+                                                            <li>Provide live chat support</li>
+                                                            <li>Monitor severs and networks and escalate to the corresponding department</li>
+                                                            <li>Provide basic customer support through ticketing system</li>
+                                                            <li>Carry out tasks under the supervision of mentor</li>
+                                                            <li>Identification of various server issues and act according to the 
+                                                                guidelines </li>
+                                                            <li>Documentation of issues</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="skillsrequired" class="list">
+                                                    <h4>Skills Required</h4> 
+                                                    <ul class="list_ul">
+                                                        <li>Excellent written and verbal communication skills </li>
+                                                        <li>Ability to handle English language as if it is your first language.</li>
+                                                        <li>General knowledge of Networking, Hardware, software </li>
+                                                        <li>Proficient in  Linux </li>
+                                                        <li>Good Knowledge on  Web server, Mail server, DNS, FTP, 
+                                                            SSH ( Thorough knowledge on Apache and DNS will fetch you the job)</li>
+                                                        <li>Good understanding about usage and purpose of Firewalls</li>
+                                                        <li>Good Team player - Able to work independently and well on a team.</li>
+                                                        <li>Caring and no bossy attitude.</li>
+                                                        <li>Willingness to share your knowledge with your colleagues.</li>
+                                                        <li>Passion to excel in whatever you do.</li>
+                                                        <li>Creative thinking and ability to 'think outside the box' are ESSENTIAL.</li>
+                                                        <li>Honesty and Integrity </li>
+                                                        <li>The ability to respond effectively under pressure </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--/currentopenings-->
+                            
+                            <div id="howwehire">
+                                <div class="row top-margin">
+                                    <div class="span5">
+                                        <div id="system_social_p">
+                                            <p>Web Designer & Coder</p>
+                                            <div id="social_j_sm_admin" class="pull-left webdesigner-media">
+                                                <%=link_to image_tag('store/facebook_tab.png',alt:'facebook',class:'left'),'#'%>
+                                                <%=link_to image_tag('store/twitter_tat.png',alt:'twitter',class:'left'),'#'%>
+                                                <%=link_to image_tag('store/in_tab.png',alt:'in',class:'left'),'#'%>
+                                                <%=link_to image_tag('store/mail_tab.png',alt:'mail',class:'left'),'#'%>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="span7">
+                                        <div id="systemadmin-right" class="content-right">
+                                            <p>We are looking for creative people who can do graphic designing as well as 
+                                            hand coding HTML and CSS of that design. When applying, please specifically 
+                                            mention if you are able to design but not code. If you are a graphic designer, 
+                                            creativity gets counted more than experience!!</p>
+                                        </div>
+                                        <div class="liked_in pull-left">
+                                            <%= link_to image_tag('store/linkedin.png',alt:'linkedin'),'#'%>
+                                            <p>Get hired faster</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="span12">
+                                        <div class="accordion-group accordianframe">
+                                            <div class="accordion-heading apply_plus">
+                                                <a class="accordion-toggle" data-parent="#my_accordion" data-toggle="collapse" href="#collapse2">
+                                                <span class="plus_bg pull-right">+</span>
+                                                <%= image_tag('store/applynow_tab.png',alt:'applynow',class:'pull-right')%></a>
+                                            </div>
+                                            <div class="accordion-body collapse accordian-sub" id="collapse2">
+                                                <div class="accordion-inner  accordian-content">
+                                                    <div class="responsibilities" class="list">
+                                                        <h4>Responsibilities</h4> 
+                                                        <ul class="list_ul">
+                                                            <li>Create graphics and layouts, including email templates, website templates, 
+                                                                web content, logos, postcards, marketing </li>
+                                                            <li>brochures, fliers, and invitations.</li>
+                                                            <li>Ability to handle multiple projects within tight deadlines</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="skillsrequired" class="list">
+                                                    <h4>Skills Required</h4> 
+                                                    <ul class="list_ul">
+                                                        <li>Web development skills -- Ability to hand code and produce production 
+                                                            ready CSS, HTML and Javascript.</li>
+                                                        <li>Experience with an open-source CMS such as Joomla or Wordpress or 
+                                                            Drupal is appreciable.</li>
+                                                        <li>Carnal knowlege of cross-browser issues - Position is Everything - 
+                                                            Clicked ?</li>
+                                                        <li>Graphic design skills -- Demonstrated proficiency with 
+                                                            Photoshop, Illustrator, and InDesign</li>
+                                                        <li>Ability to create simple, effective and elegant web designs.</li>
+                                                        <li>An exceptional portfolio of past work - Freshers with creativity 
+                                                            may apply.</li>
+                                                        <li>Passionate about interactive design and all things Internet</li>
+                                                        <li>Knowledge of Javascript a plus. Ability to understand modern, 
+                                                            DOM-friendly Javascript, specifically the </li>
+                                                        <li>Prototype/Scriptaculous or jQuery libraries. </li>
+                                                        <li>Attention to detail and a positive attitude.</li>
+                                                        <li>A degree in Arts/Design is desirable.</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--/how we hire-->
+                            
+                            <div id="howtoapply">
+                                <div class="row top-margin">
+                                    <div class="span5">
+                                        <div id="system_social_p">
+                                            <p id="junior_p">Linux System Administrator</p>
+                                            <p>Level III / Guru Level</p>
+                                            <div id="social_j_sm_admin" class="pull-left">
+                                                <%=link_to image_tag('store/facebook_tab.png',alt:'facebook',class:'left'),'#'%>
+                                                <%=link_to image_tag('store/twitter_tat.png',alt:'twitter',class:'left'),'#'%>
+                                                <%=link_to image_tag('store/in_tab.png',alt:'in',class:'left'),'#'%>
+                                                <%=link_to image_tag('store/mail_tab.png',alt:'mail',class:'left'),'#'%>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="span7">
+                                        <div id="systemadmin-right" class="content-right">
+                                            <p>You will be responsible for setting up (over KVM), maintenance and management of Linux based servers and its applications.</p>
+                                        </div>
+                                        <div class="liked_in pull-left">
+                                            <%= link_to image_tag('store/linkedin.png',alt:'linkedin') , '#' %>
+                                            <p>Get hired faster</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="span12">
+                                        <div class="accordion-group accordianframe">
+                                            <div class="accordion-heading apply_plus">
+                                                <a class="accordion-toggle" data-parent="#my_accordion" data-toggle="collapse" href="#collapse3">
+                                                <span class="plus_bg pull-right">+</span>
+                                                <%= image_tag('store/applynow_tab.png',alt:'applynow',class:'pull-right') %></a>
+                                            </div>
+                                            <div class="accordion-body collapse accordian-sub" id="collapse3">
+                                                <div class="accordion-inner  accordian-content">
+                                                    <div class="responsibilities" class="list">
+                                                        <h4>Responsibilities</h4> 
+                                                        <ul class="list_ul">
+                                                          <li>Monitoring the load, diagnosis and isolation of the reasons.</li>
+                                                          <li>Server Optimization and Security Fixes</li>
+                                                          <li>Maintaining backups - including twice in a week check to make 
+                                                              sure that the backups are running.</li>
+                                                          <li>Developing and maintaining scripts for monitoring and reporting 
+                                                              various aspects of system performance, resource utilization, and 
+                                                              application usage</li>
+                                                          <li>Implementing intruder detections </li>
+                                                          <li>Implementing hardware and software alarm system </li>
+                                                          <li>Installing, optimizing, monitoring web servers, file servers, 
+                                                              Database servers, Mail Servers etc</li>
+                                                          <li>Shell/Perl/PHP/Python programming</li>
+                                                          <li>Installation / patching and configuration of Kernel and Software 
+                                                              packages.</li>
+                                                          <li>Documentation of each process / tasks done.</li>
+                                                      </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="skillsrequired" class="list">
+                                                    <h4>Skills Required</h4> 
+                                                    <ul class="list_ul">
+                                                        <li>Minimum 4 years Linux administration experience</li>
+                                                        <li>System architecture, topology design and implementation experience.</li>
+                                                        <li>Excellent written communication skills in the English language.</li>
+                                                        <li>Dependable to be at work during assigned shifts and to complete 
+                                                            work as expected.</li>
+                                                        <li>Advanced knowledge of Linux OS and must have worked on all major 
+                                                            distros.</li>
+                                                        <li>Knowledge of bash and Perl shell scripting.</li>
+                                                        <li>TCP/IP networking & troubleshooting </li>
+                                                        <li>Advance knowledge on Apache, PHP, Sendmail, Exim and MySQL</li>
+                                                        <li>Experience in building out MySQL clusters and high availability clusters</li>
+                                                        <li>Attention to detail and dependability</li>
+                                                        <li>Able to work in a high pressure 24x7x365 environment</li>
+                                                        <li>Willingness to learn, teach and be challenged.</li>
+                                                        <li>Ability to work independently, think creatively in order to 
+                                                            solve problems, and effectively prioritize and complete tasks 
+                                                            with minimal supervision.</li>
+                                                        <li>Certifications like RHCE, CCNA, MCSE, CEH etc are preferable.</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--/how to apply-->
+                            
+                            <div id="howtoreach">
+                                <div class="row top-margin">
+                                    <div class="span5">
+                                        <div id="system_social_p">
+                                            <p id="junior_p">Senior Technical Support</p>
+                                            <p>Engineer</p>
+                                            <div id="social_j_sm_admin" class="pull-left seniortechnical-media">
+                                                <%=link_to image_tag('store/facebook_tab.png',alt:'facebook',class:'left'),'#'%>
+                                                <%=link_to image_tag('store/twitter_tat.png',alt:'twitter',class:'left'),'#'%>
+                                                <%=link_to image_tag('store/in_tab.png',alt:'in',class:'left'),'#'%>
+                                                <%=link_to image_tag('store/mail_tab.png',alt:'mail',class:'left'),'#'%>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="span7">
+                                        <div id="systemadmin-right" class="content-right">
+                                            <p>We are seeking a Senior Technical Support Engineer to join our fast growing company. 
+                                           You will be responsible for providing in-depth technical support to our customers, 
+                                           end users, and support partners.</p>
+                                        </div>
+                                        <div class="liked_in pull-left">
+                                            <%= link_to image_tag('store/linkedin.png',alt:'linkedin'), '#' %>
+                                            <p>Get hired faster</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="span12">
+                                        <div class="accordion-group accordianframe noborder">
+                                            <div class="accordion-heading apply_plus">
+                                                <a class="accordion-toggle" data-parent="#my_accordion" data-toggle="collapse" href="#collapse4">
+                                                <span class="plus_bg pull-right">+</span>
+                                                <%= image_tag('store/applynow_tab.png',alt:'applynow',class:'right') %></a>
+                                            </div>
+                                            <div class="accordion-body collapse accordian-sub" id="collapse4">
+                                                <div class="accordion-inner  accordian-content">
+                                                    <div class="responsibilities" class="list">
+                                                        <h4>Responsibilities</h4> 
+                                                        <ul class="list_ul">
+                                                            <li>Troubleshooting, diagnosing and resolving technical issues 
+                                                                raised by the end users over our client's ticketing system or chat.</li>
+                                                            <li>Write technical articles for the knowledge base.</li>
+                                                            <li>Act as mentor for Level I staff.</li>
+                                                            <li>If you prove yourself to have the managerial abilities, you will 
+                                                                be act as supervisor / team leader for a shift/team.</li>
+                                                            <li>Work directly with customers via phone and trouble tickets to 
+                                                                resolve hosting service related issues.</li>
+                                                            <li>Participate in the planning of future network services and 
+                                                                development of internal applications to accomplish requirements 
+                                                                and improve overall efficiency.</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="skillsrequired" class="list">
+                                                    <h4>Skills Required</h4> 
+                                                    <ul class="list_ul">
+                                                        <li>Windows/Linux/Unix system administration skills </li>
+                                                        <li>Excellent customer management and communication skills. </li>
+                                                        <li>Min 2 years experience as a technical support engineer.</li>
+                                                        <li>Good understanding of netfilter/iptables.</li>
+                                                        <li>Good knowledge in web servers, NFS, DNS, NIS, MTAs</li>
+                                                        <li>Nice to have experience with Apache, Litespeed, CentOS, 
+                                                            Nagios, Cacti, DNS, hosted services, MySQL, R1soft, Wordpress, cPanel </li>
+                                                        <li>TCP/IP networking & troubleshooting </li>
+                                                        <li>Good knowledge of network design - Working with Firewalls, 
+                                                            DNS, Load Balancers</li>
+                                                        <li>Prefer some programming experience (particularly Perl, PHP, HTML, MySQL)</li>
+                                                        <li>Knowledge of relational databases including a database query language</li>
+                                                        <li>Strong written communications skills in English language.</li>
+                                                        <li>B.Tech / B.E in Computer Science / IT / ECE.</li>
+                                                        <li>Good knowledge on shell scripting.</li>
+                                                        <li>Certifications like RHCE, CCNA, MCSE, MCP, RHCT etc are preferable.</li>
+                                                        <li>Hands on experience with control panels like cPanel, Plesk, Ensim, 
+                                                            H-Sphere, Direct Admin, dotNetPanel etc.</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--/how to reach-->
+                            
+                            
+                            
+                            
+                            
+                        </div>
+                        
+                        
+                        
+                        <div class="tab-pane" id="how-we-hire">2</div>
+                        <div class="tab-pane" id="how-to-apply">3</div>
+                        <div class="tab-pane" id="how-to-reach">4</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

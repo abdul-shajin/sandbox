@@ -1,0 +1,38 @@
+    <header>
+        <div class="container-fluid top-bg"></div>
+        <div class="container">
+            <div class="row">
+                <div class="span4">
+                    <div id="logo">
+                        <%= image_tag "store/logo.png" %>
+                    </div>
+                </div>
+                <div class="span8">
+                    <div id="wearehiring" class="pull-right">
+                         <%= link_to image_tag("store/we_are_hiring.png", alt: 'We are Hiring'),'#careers' %>
+                    </div>
+                    <div id="header-contact">
+                        <p id="livechat_icon">
+                            <span>
+                                <%=image_tag("store/livechat_icon.png")%>
+                        </p>
+                        <p id="phone_icon">
+                            <span>
+                                <%= image_tag 'store/phone_icon.png' %></span>1800-999-9999
+                        </p>
+                    </div>
+                    <nav id="topnavigation">
+                        <ul class="nav nav-pills pull-right">
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><%= link_to 'Careers', career_path %></li>
+                            <li><a href="#">Specials</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">My Account</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <%= render partial: 'shared/top_nav_menu' %>
+    </header>

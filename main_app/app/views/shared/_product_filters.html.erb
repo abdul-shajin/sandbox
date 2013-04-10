@@ -1,0 +1,27 @@
+                <div class="span3">
+                    <% if @selected_taxons.any? %>
+                    <h5 id="serviceoption">Currently Shopping by</h5>
+                    <% @selected_taxons.each_with_index do |taxon_selected,i| %>
+                      <div>
+                        <%= taxon_selected.name %><%= link_to ' (x)','#',data: {id: taxon_selected.id, stat: 'to_remove'}  %>
+                      </div>
+                    <% end %>
+                    <% end %>
+                    <h4 id="serviceoption">SERVICE OPTIONS</h4>
+                    <div id="service-accordian">
+                        <% (@taxon.children - @selected_taxons.map(&:parent)).each_with_index do |taxon,i| %>
+                        <button type="button" class="btn btn-danger acc-heading" data-toggle="collapse" data-target="#demo<%= i %>" <%='disabled' if @rules.include?(taxon.permalink) %>><%= taxon.name %></button>
+                            <div id="demo<%= i %>" class="collapse in acco-inner">
+                            <% taxon.children.each_with_index do |sub_taxon,i| %>
+                            <p class=<%= "top-mar" if i == 0%>>
+                                <% if params[:perm] %>
+                                <%= link_to sub_taxon.name , '#',data: {id: sub_taxon.id, stat:'to_update'} %>
+                                <% else %>
+                                <%= link_to sub_taxon.name, "/filter_group/#{@taxon.permalink}?perm[]=#{sub_taxon.id}" %>
+                                <% end %>
+                            </p>
+                            <% end %>
+                        </div>
+                        <% end %>
+                    </div>
+                </div>

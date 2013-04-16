@@ -1,7 +1,6 @@
  module Spree
 	module Core
 	  module ProductFilters
-	   p '&'*70	
       # Example: filtering by price
       #   The named scope just maps incoming labels onto their conditions, and builds the conjunction
       #   'price' is in the base scope's context (ie, "select foo from products where ...") so

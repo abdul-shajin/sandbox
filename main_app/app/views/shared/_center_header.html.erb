@@ -1,9 +1,14 @@
+    <% unless (params[:controller].eql?('static_pages') && ['index'].include?(params[:action])) %>
     <div class="container-fluid below_nav_bg">
         <div class="container">
             <div class="row">
                 <div class="span12">
-                    <div id="below_nav_h"><p id="contactus"><%= yield(:center_header) %></p></div>
+                    <div id="below_nav_h">
+                    	<p id="contactus"><%= yield(:center_header) %></p>
+                    	<p id='ourphilosophy'><%= yield(:ourphilosophy) %></p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <% end %>

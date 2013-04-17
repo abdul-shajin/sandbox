@@ -1,24 +1,12 @@
+<%= provide(:title, 'Why SupportSages - SupportSages') %>
+<%= provide(:center_header, 'Corporate') %>
+<%= provide(:ourphilosophy,'Voice of Customers')%>
+<%= stylesheet_link_tag 'store/corporate' %>
+
 <div class="container-fluid">
         <div class="container">
             <div class="row">
-                <div class="span3">
-                    <div id="ourphilo_menus" class="">
-                        <p><a href="#">Our Philosophy</a></p>
-                        <div class="ourphilo_menus_border"></div>
-                        <p><a href="#">About Us</a></p>
-                        <div class="ourphilo_menus_border"></div>
-                        <p><a href="#">Voice of Customers</a></p>
-                        <div class="ourphilo_menus_border"></div>
-                        <p><a href="#">Know Our Sages</a></p>
-                        <div class="ourphilo_menus_border"></div>
-                        <p><a href="#">Why SupportSages</a></p>
-                        <div class="ourphilo_menus_border"></div>
-                        <p><a href="#">SuportSages Blog</a></p>
-                        <div class="ourphilo_menus_border"></div>
-                        <p><a href="#">Contact Us</a></p>
-                        <div class="ourphilo_menus_border"></div>
-                    </div>
-                </div>
+                <%= render :partial => 'side_menu' %>
                 <div class="span9">
                     <div>
                         <div class="row"><h3>12 Reasons to Choose SupportSages</h3></div>
@@ -134,7 +122,7 @@
                             This is attributed by our committed team which continues to produce happy customers, 
                             who vouch for us through word of mouth. 
                             </p>
-                            <div id="consistent_n_stable_performance_bg"><%=image_tag('store/')%><%=image_tag('store/clock_hover9.png')%></div>
+                            <div id="consistent_n_stable_performance_bg"><%=image_tag('store/clock_hover9.png')%></div>
                         </div>
                         <div id="excellent_track_record" class="clockcontent_display">
                             <h3>Excellent track record</h3>

@@ -101,5 +101,18 @@ describe "StaticPages" do
     it { have_selector('Our Philosophy',href: '#')}
   end
 
+  describe 'top menu' do
+    # before { visit root_path }
+    it { have_link('Contact Us',href: contact_us_path)}
+    it { have_link('Careers',href: career_path)}
+    it { have_link('Specials',href: '#')}
+    it { have_link('FAQ',href: '#')}
+    it { have_link('My Account',:href => career_path)}
+    it { have_link('Home',href: 'root_path')}
+    it { have_link('Helpdesk Support',href: helpdesk_support_path)}
+    it { have_link('Corporate',href: corporate_path)}
+    it { have_link('Team Plans',href: teamplan_path)}
+    it { have_link('Why SupportSages',href: '/whysupportsages')}
+  end
 
 end

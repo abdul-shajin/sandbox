@@ -2,8 +2,8 @@
             <div class="container">
                 <div class="row">
                     <ul id="navigation">
-                        <li class="current"><a id="home_menu" class="nav_a_bg_color" href="index.html">Home</a></li>
-                        <li><a id="helpdesk_support_menu" class="nav_a_bg_color current-page" href="helpdesk-support">Helpdesk Support</a>
+                        <li class="current"><%= link_to 'Home',root_path,id:'home_menu',class:current_class_css('static_pages','index')%></li>
+                        <li><%= link_to 'Helpdesk Support',helpdesk_support_path,id:'helpdesk_support_menu',class: current_class_css('static_pages','helpdesk_support'),href:'helpdesk-support'%>
                             <ul id="helpdesk_support_drop_page">
                                 <div id="menu-first-clmn" class="pull-left">
                                     <a href="#"><%=image_tag 'store/helpdesk.png', id:'main-img'%></a>
@@ -20,7 +20,7 @@
                                 </div>
                                 <div id="team_plans_clm" class="pull-left">
                                     <a href="#"><%=image_tag 'store/live_chat_ph_icon.png',id:'menu_icon'%></a>
-                                    <a href="teamplan.html"><p id="team_plans_b">TEAM PLANS</p></a>
+                                    <%= link_to teamplan_path do %><p id='team_plans_b'>TEAM PLANS</p><% end %>
                                     <a href="#"><p class="font_size" id="dedicated_h">Dedicated</p></a>
                                     <a href="#"><p class="font_size" id="semi_dedicated_h">Semi dedicated</p></a>
                                     <a href="#"><p class="font_size" id="shared_h">Shared</p></a>
@@ -56,7 +56,7 @@
                                 </div>
                             </ul>
                         </li>
-                        <li><a id="server_management_menu" class="nav_a_bg_color" href="#">Server Management</a>
+                        <li><%= link_to 'Server Management','#',id:'server_management_menu',class:current_class_css('static_pages','')%>
                             <ul id="server_management_drop_page">
                                 <%= render :partial => 'shared/nav_menu_first_column' %>
                                 <div class="servermanagement pull-left">
@@ -149,7 +149,7 @@
                                     <li><a href="#"><p class="menu-heading">THE SAGES</p></a></li>
                                     <li><a href="#"><p class="menu-sub">Our Philosophy</p></a></li>
                                     <li><a href="#"><p class="menu-sub">About Us</p></a></li>
-                                    <li><a href="voice-of-customers.html"><p class="menu-sub">Voice of Customers</p></a></li>
+                                    <li><%= link_to voice_of_customers_path do %><p class='menu-sub'>Voice of Customers</p><% end %></li>
                                     <li><a href="#"><p class="menu-sub">Know Our Sages</p></a></li>
                                     <li><a href="whysupportsages.html"><p class="menu-sub">Why SupportSages</p></a></li>
                                     <li><a href="#"><p class="menu-sub">SupportSages Blog</p></a></li>

@@ -12,8 +12,8 @@ gem 'sqlite3'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'coffee-rails', '~> 3.2'
-  gem 'sass-rails', '~> 3.2'
+  gem 'coffee-rails', '~> 3.2.2'
+  gem 'sass-rails', '~> 3.2.4'
 end
 
 group :test do

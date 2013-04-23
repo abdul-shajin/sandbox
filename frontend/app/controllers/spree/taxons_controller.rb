@@ -51,7 +51,7 @@ module Spree
         @rules << rule_hash unless rule_hash.nil? 
       end
       @rules.flatten!
-      @products = Product.in_taxons(@selected_taxons)
+      @products = Product.in_taxons(@selected_taxons).where(:deleted_at => nil)
       render layout: 'main'
     end
 

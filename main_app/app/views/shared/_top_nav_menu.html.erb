@@ -5,19 +5,7 @@
                         <li class="current"><%= link_to 'Home',root_path,id:'home_menu',class:current_class_css('static_pages','index')%></li>
                         <li><%= link_to 'Helpdesk Support','/helpdesk_support',id:'helpdesk_support_menu',class: current_class_css('static_pages','helpdesk_support'),href:'helpdesk-support'%>
                             <ul id="helpdesk_support_drop_page">
-                                <div id="menu-first-clmn" class="pull-left">
-                                    <a href="#"><%=image_tag 'store/helpdesk.png', id:'main-img'%></a>
-                                    <a href="#"><h3 class="main-head">Helpdesk</h3></a>
-                                    <a href="#"><h3 id="support-h">Support</h3></a>
-                                    <a href="#"><%=image_tag 'store/order_now.png' %></a>
-                                    <a href="#"><%=image_tag 'store/helpsupport.png', id:'helpsupport'%></a>
-                                    <div id="menu-media">
-                                        <a href="#"><%=image_tag 'store/twitter.png'%></a>
-                                        <a href="#"><%=image_tag 'store/facebook.png'%></a>
-                                        <a href="#"><%=image_tag 'store/in.png'%></a>
-                                        <a href="#"><%= image_tag 'store/google_plus.jpg'%></a>
-                                    </div>
-                                </div>
+                                <%= render :partial => 'shared/nav_menu_first_column' %>
                                 <div id="team_plans_clm" class="pull-left">
                                     <a href="#"><%=image_tag 'store/live_chat_ph_icon.png',id:'menu_icon'%></a>
                                     <%= link_to '/teamplan' do %><p id='team_plans_b'>TEAM PLANS</p><% end %>

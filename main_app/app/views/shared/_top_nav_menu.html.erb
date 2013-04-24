@@ -5,7 +5,7 @@
                         <li class="current"><%= link_to 'Home',root_path,id:'home_menu',class:current_class_css('static_pages','index')%></li>
                         <li><%= link_to 'Helpdesk Support','/helpdesk_support',id:'helpdesk_support_menu',class: current_class_css('static_pages','helpdesk_support'),href:'helpdesk-support'%>
                             <ul id="helpdesk_support_drop_page">
-                                <%= render :partial => 'shared/nav_menu_first_column' %>
+                                <%= render :partial => 'shared/nav_menu_first_column',:locals => {:nav_name => 'HelpDesk Support'} %>
                                 <div id="team_plans_clm" class="pull-left">
                                     <a href="#"><%=image_tag 'store/live_chat_ph_icon.png',id:'menu_icon'%></a>
                                     <%= link_to '/teamplan' do %><p id='team_plans_b'>TEAM PLANS</p><% end %>
@@ -46,7 +46,7 @@
                         </li>
                         <li><%= link_to 'Server Management','#',id:'server_management_menu',class:current_class_css('static_pages','')%>
                             <ul id="server_management_drop_page">
-                                <%= render :partial => 'shared/nav_menu_first_column' %>
+                                <%= render :partial => 'shared/nav_menu_first_column',:locals => {:nav_name => 'Server Management'}  %>
                                 <div class="servermanagement pull-left">
                                     <li><a href="#"><%=image_tag 'store/solutions.png',id:'solutions_icon'%></a></li>
                                     <li><a href="#"><p class="menu-heading">SOLUTIONS</p></a></li>
@@ -81,7 +81,7 @@
                         </li>
                         <li><a id="hire_a_sage_menu" class="nav_a_bg_color" href="#">Hire a Sage</a>
                             <ul id="hire_a_sage_drop_page">
-                                <%= render :partial => 'shared/nav_menu_first_column' %>
+                                <%= render :partial => 'shared/nav_menu_first_column',:locals => {:nav_name => 'Hire a Sage'} %>
 
                                 <div class="helpdesk_icon_clm pull-left">
                                     <li><a href="#"><%=image_tag 'store/help_desk.png',id:'help_desk_icon' %></a></li>
@@ -109,7 +109,7 @@
                         </li>
                         <li><a id="focus_areas_menu" class="nav_a_bg_color" href="#">Focus Areas</a>
                             <ul id="focus_areas_drop_page">
-                                <%= render :partial => 'shared/nav_menu_first_column' %>
+                                <%= render :partial => 'shared/nav_menu_first_column',:locals => {:nav_name => 'Focus Areas'} %>
 
                                 <div class="focusarea_icon_clm pull-left">
                                     <li><a href="#"><%= image_tag 'store/focusarea_icon.png',id:'focusarea_icon' %>\</a></li>
@@ -131,7 +131,7 @@
                         </li>
                         <li><a id="corporate_menu" class="nav_a_bg_color" href="corporate.html">Corporate</a>
                             <ul id="corporate_drop_page">
-                                <%= render :partial => 'shared/nav_menu_first_column' %>
+                                <%= render :partial => 'shared/nav_menu_first_column',:locals => {:nav_name => 'Corporate'} %>
                                 <div class="corporate_icon_clm pull-left">
                                     <li><a href="#"><%= image_tag 'store/corporate_icon.png',id:'corporate_icon' %></a></li>
                                     <li><a href="#"><p class="menu-heading">THE SAGES</p></a></li>

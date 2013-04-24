@@ -44,7 +44,7 @@ module Spree
     preference :currency_thousands_separator, :string, default: ","
     preference :display_currency, :boolean, default: false
     preference :default_country_id, :integer
-    preference :default_meta_description, :string, default: 'Spree demo site'
+    preference :default_meta_description, :string, default: 'SupportSages'
     preference :default_meta_keywords, :string, default: 'spree, demo'
     preference :default_seo_title, :string, default: ''
     preference :dismissed_spree_alerts, :string, default: ''
@@ -64,7 +64,7 @@ module Spree
     preference :show_only_complete_orders_by_default, :boolean, default: true
     preference :show_variant_full_price, :boolean, default: false #Displays variant full price or difference with product price. Default false to be compatible with older behavior
     preference :show_products_without_price, :boolean, default: false
-    preference :site_name, :string, default: 'Spree Demo Site'
+    preference :site_name, :string, default: 'SupportSages'
     preference :site_url, :string, default: 'demo.spreecommerce.com'
     preference :tax_using_ship_address, :boolean, default: true
     preference :track_inventory_levels, :boolean, default: true # will not track on_hand values for variants /products

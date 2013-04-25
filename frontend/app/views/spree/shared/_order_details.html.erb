@@ -17,7 +17,7 @@
         <div class="delivery">
           <% order.shipments.each do |shipment| %>
             <%= shipment.stock_location.name if shipment.stock_location.present? %>
-            <%= shipment.shipping_method.name if shipment.shipping_method .present? %>
+            <%= shipment.shipping_method.name if shipment.shipping_method.present? %>
             <br/>
           <% end %>
         </div>

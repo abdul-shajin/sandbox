@@ -80,7 +80,6 @@
           conds.each do |new_scope|
             scope = scope.or(new_scope)
           end
-          debugger
           Spree::Product.with_property("brand").where(scope)
         end
 

@@ -1,5 +1,4 @@
 Spree::Order.class_eval do 
-  p '%'*200
   checkout_flow do
       go_to_state :address
       #go_to_state :delivery - Removed d delivery system

@@ -3,7 +3,7 @@
                 <div class="row">
                     <ul id="navigation">
                         <li class="current"><%= link_to 'Home',root_path,id:'home_menu',class:current_class_css('static_pages','index')%></li>
-                        <li><%= link_to 'Helpdesk Support','/helpdesk_support',id:'helpdesk_support_menu',class: current_class_css('static_pages','helpdesk_support'),href:'helpdesk-support'%>
+                        <li><%= link_to 'Helpdesk Support',main_app.helpdesk_support_path,id:'helpdesk_support_menu',class: current_class_css('static_pages','helpdesk_support'),href:'helpdesk-support'%>
                             <ul id="helpdesk_support_drop_page">
                                 <%= render :partial => 'shared/nav_menu_first_column',:locals => {:nav_name => 'HelpDesk Support'} %>
                                 <div id="team_plans_clm" class="pull-left">
@@ -129,8 +129,7 @@
                                 </div>
                             </ul>
                         </li>
-                        <li><a id="corporate_menu" class="nav_a_bg_color" href="corporate.html">Corporate</a>
-                            <ul id="corporate_drop_page">
+                        <li><%= link_to 'Corporate',main_app.corporate_path,id:'corporate_menu',class:'nav_a_bg_color'%>                            <ul id="corporate_drop_page">
                                 <%= render :partial => 'shared/nav_menu_first_column',:locals => {:nav_name => 'Corporate'} %>
                                 <div class="corporate_icon_clm pull-left">
                                     <li><a href="#"><%= image_tag 'store/corporate_icon.png',id:'corporate_icon' %></a></li>

@@ -41,6 +41,7 @@ gem 'jquery-rails'
 gem 'spree', :path => '..'
 gem 'spree_auth_devise', :github => 'spree/spree_auth_devise'
 gem 'spree_paypal_express', :git => 'git://github.com/spree/spree_paypal_express.git'
+gem 'spree_recurring', :git => 'git://github.com/codesavvy/spree_recurring.git'
 
 group :test,:development do
 	gem "rspec-rails", "2.11.0"

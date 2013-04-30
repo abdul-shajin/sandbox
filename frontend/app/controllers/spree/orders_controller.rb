@@ -21,7 +21,7 @@ module Spree
         respond_with(@order) do |format|
           format.html do
             if params.has_key?(:checkout)
-              @order.next_transition.run_callbacks if @order.next_transition.present?
+              @order.next_transition.run_callbacks
               redirect_to checkout_state_path(@order.checkout_steps.first)
             else
               redirect_to cart_path
@@ -64,7 +64,7 @@ module Spree
     end
 
     def accurate_title
-      @order && @order.completed? ? "#{t(:order)} #{@order.number}" : t(:shopping_cart)
+      @order && @order.completed? ? "#{Order.model_name.human} #{@order.number}" : t(:shopping_cart)
     end
 
     def check_authorization

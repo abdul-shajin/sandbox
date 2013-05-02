@@ -53,3 +53,5 @@ test_app
 .rvmrc
 **/coverage
 */.sass-cache
+.tags
+.tags_sorted_by_file

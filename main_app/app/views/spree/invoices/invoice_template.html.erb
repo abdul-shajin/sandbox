@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<div id="wrapper">
+		<div id="header">
+			<%= wicked_pdf_image_tag(SpreeInvoice.invoice_seller_logo) %>
+		</div>
+		<div id="content">
+			<%= SpreeInvoice.invoice_seller_details %><br />
+			<%= @order.id %>
+		</div>
+	</div>
+<!-- to pdf starts here -->
+<% if @order.has_step?("address") %>
+    <div class="columns alpha four" data-hook="order-ship-address">
+      <h6><%= t(:shipping_address) %> <%= link_to "(#{t(:edit)})", checkout_state_path(:address) unless @order.completed? %></h6>
+      <%= render :partial => 'spree/shared/address', :locals => { :address => @order.ship_address } %>
+    </div>
+
+    <div class="columns alpha four" data-hook="order-bill-address">
+      <h6><%= t(:billing_address) %> <%= link_to "(#{t(:edit)})", checkout_state_path(:address) unless @order.completed? %></h6>
+      <%= render :partial => 'spree/shared/address', :locals => { :address => @order.bill_address } %>
+    </div>
+  <% end %>
+<!-- to pdf ends here -->
+
+</body>
+</html>

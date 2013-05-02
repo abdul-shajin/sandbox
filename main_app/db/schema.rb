@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130418124459) do
+ActiveRecord::Schema.define(:version => 20130430105258) do
 
   create_table "shipping_methods_zones", :id => false, :force => true do |t|
     t.integer "shipping_method_id"
@@ -159,6 +159,17 @@ ActiveRecord::Schema.define(:version => 20130418124459) do
   add_index "spree_inventory_units", ["order_id"], :name => "index_inventory_units_on_order_id"
   add_index "spree_inventory_units", ["shipment_id"], :name => "index_inventory_units_on_shipment_id"
   add_index "spree_inventory_units", ["variant_id"], :name => "index_inventory_units_on_variant_id"
+
+  create_table "spree_invoices", :force => true do |t|
+    t.integer  "counter",        :default => 0
+    t.string   "invoice_number"
+    t.integer  "order_id"
+    t.integer  "user_id"
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
+  end
+
+  add_index "spree_invoices", ["invoice_number"], :name => "index_spree_invoices_on_invoice_number"
 
   create_table "spree_line_items", :force => true do |t|
     t.integer  "variant_id"

@@ -1,7 +1,7 @@
 Spree::Order.class_eval do 
   checkout_flow do
       go_to_state :address
-      #go_to_state :delivery - Removed d delivery system
+      go_to_state :delivery #- Removed d delivery system
       go_to_state :payment, if: ->(order) {
         # Fix for #2191
         if order.shipments

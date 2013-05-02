@@ -5,7 +5,7 @@ Sandbox::Application.routes.draw do
   # If you would like to change where this engine is mounted, simply change the :at option to something different.
   #
   # We ask that you don't use the :as option here, as Spree relies on it being the default of "spree"
-  mount Spree::Core::Engine, :at => '/spree'
+  mount Spree::Core::Engine, :at => '/buy'
   match 'access_child_dropdown/:t_id' => 'spree/taxons#access_child_dropdown'
 
   match '/filter_group/:id' => 'spree/taxons#filter_group', :as => :filter_group

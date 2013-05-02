@@ -41,7 +41,10 @@ gem 'jquery-rails'
 gem 'spree', :path => '..'
 gem 'spree_auth_devise', :github => 'spree/spree_auth_devise'
 gem 'spree_paypal_express', :git => 'git://github.com/spree/spree_paypal_express.git'
+gem 'spree_invoice', :path => '../../spree_invoice_generator'
 
+#https://github.com/damianogiacomello/spree_invoice_generator (Integrated from)
+gem 'wicked_pdf' , '0.9.6'
 group :test,:development do
 	gem "rspec-rails", "2.11.0"
   gem 'capybara', '1.1.2'

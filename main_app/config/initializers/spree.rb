@@ -9,6 +9,8 @@ Spree.config do |config|
   # Example:
   # Uncomment to override the default site name.
   # config.site_name = "Spree Demo Site"
+  config.allow_guest_checkout = false
+  config.address_requires_state = false
 end
 
 Spree.user_class = "Spree::User"

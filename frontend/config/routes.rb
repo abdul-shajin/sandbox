@@ -24,15 +24,22 @@ Spree::Core::Engine.routes.prepend do
 
   resources :orders do
     post :populate, :on => :collection
-  end
 
+    resources :line_items
+
+    resources :shipments do
+      member do
+        get :shipping_method
+      end
+    end
+
+  end
   get '/cart', :to => 'orders#edit', :as => :cart
   put '/cart', :to => 'orders#update', :as => :update_cart
   put '/cart/empty', :to => 'orders#empty', :as => :empty_cart
 
   # route globbing for pretty nested taxon and product paths
   match '/t/*id', :to => 'taxons#show', :as => :nested_taxons
-
 
   match '/unauthorized', :to => 'home#unauthorized', :as => :unauthorized
   match '/content/cvv', :to => 'content#cvv', :as => :cvv

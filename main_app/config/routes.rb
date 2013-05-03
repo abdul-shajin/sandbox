@@ -5,14 +5,16 @@ Sandbox::Application.routes.draw do
   # If you would like to change where this engine is mounted, simply change the :at option to something different.
   #
   # We ask that you don't use the :as option here, as Spree relies on it being the default of "spree"
-  mount Spree::Core::Engine, :at => '/buy'
+  root :to => 'static_pages#index'
+
+  mount Spree::Core::Engine, :at => '/'
   match 'access_child_dropdown/:t_id' => 'spree/taxons#access_child_dropdown'
 
   match '/filter_group/:id' => 'spree/taxons#filter_group', :as => :filter_group
 
   #Routes for Static Pages
   get 'helpdesk-support' => 'static_pages#helpdesk_support' ,:as => 'helpdesk_support'
-  get 'careers' => 'static_pages#careers', as: 'career'  
+  get 'careers' => 'static_pages#careers', as: 'career'
   get 'contact' => 'static_pages#contact_us', as: 'contact_us'
   get 'corporate' => 'static_pages#corporate', as: 'corporate'
   get 'helpdesklivechat' => "static_pages#helpdesklivechat", as: 'helpdesklivechat'

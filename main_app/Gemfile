@@ -38,7 +38,7 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
-gem 'spree', :path => '..'
+gem 'spree', :github => 'spree/spree',branch: 'master'
 gem 'spree_auth_devise', :github => 'spree/spree_auth_devise'
 gem 'spree_paypal_express', :git => 'git://github.com/spree/spree_paypal_express.git'
 gem 'spree_invoice', :path => '../../spree_invoice_generator'

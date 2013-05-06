@@ -9,9 +9,16 @@ Spree.config do |config|
   # Example:
   # Uncomment to override the default site name.
   # config.site_name = "Spree Demo Site"
-  config.allow_guest_checkout = false
-  config.address_requires_state = false
 end
 
 Spree.user_class = "Spree::User"
 require 'spree/product_filters'
+
+Spree::AppConfiguration.class_eval do
+  preference :address_requires_state, :boolean, default: false # should state/state_name be required
+  preference :emails_sent_from, :string, default: 'spree@example.com'
+  preference :site_url, :string, default: 'beta.supportsages.com'
+  preference :site_name, :string, default: 'SupportSages'
+  preference :default_meta_description, :string, default: 'SupportSages'
+  preference :allow_guest_checkout, :boolean, default: false
+end

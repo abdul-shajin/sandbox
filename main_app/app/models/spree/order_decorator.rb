@@ -7,4 +7,8 @@ Spree::Order.class_eval do
         (order.payment_required? && order.has_unprocessed_payments?) || !order.payment_required?
       }
   end
+
+  def product_names
+    products.map(&:name)
+  end
 end

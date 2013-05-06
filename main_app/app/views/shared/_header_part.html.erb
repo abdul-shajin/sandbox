@@ -28,7 +28,13 @@
                             <li><a href="#">Specials</a></li>
                             <li><a href="#">FAQ</a></li>
                             <li><a href="#">Blog</a></li>
-                            <li><a href="#">My Account</a></li>
+                            <li>
+                                <% if spree_current_user %>
+                                  <%= link_to 'My Account',spree.account_path %>
+                                <% else %>
+                                  <%= link_to 'Login', spree.login_path %>
+                                <% end %>
+                            </li>
                         </ul>
                     </nav>
                 </div>

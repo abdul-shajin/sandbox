@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130509191834) do
+ActiveRecord::Schema.define(:version => 20130512150034) do
 
   create_table "shipping_methods_zones", :id => false, :force => true do |t|
     t.integer "shipping_method_id"
@@ -192,6 +192,8 @@ ActiveRecord::Schema.define(:version => 20130509191834) do
     t.datetime "created_at",                               :null => false
     t.datetime "updated_at",                               :null => false
     t.string   "currency"
+    t.string   "duration"
+    t.string   "interval"
   end
 
   add_index "spree_line_items", ["order_id"], :name => "index_spree_line_items_on_order_id"
@@ -701,7 +703,6 @@ ActiveRecord::Schema.define(:version => 20130509191834) do
     t.string   "cost_currency"
     t.integer  "position"
     t.integer  "issues_number"
-    t.string   "interval"
   end
 
   add_index "spree_variants", ["product_id"], :name => "index_spree_variants_on_product_id"

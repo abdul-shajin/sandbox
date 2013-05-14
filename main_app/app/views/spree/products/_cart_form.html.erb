@@ -33,11 +33,20 @@
           <div><span class="price selling" itemprop="price"><%= @product.price_in(current_currency).display_price %></span></div>
         </div>
 
+        <% if @product.subscribable? %>
+          <div id="product-recurr-period">
+                 <h6 class="product-section-title"><%= label_tag :recurring_period %></h6>
+                 <div><span class="price selling" itemprop="price"> <%= text_field_tag 'line_item[duration]' , '1',:size => 3%> </span></div>
+                 <%= select_tag 'line_item[interval]', options_for_select(['Month','Year','Week','TriAnnual']) %>
+           </div>
+        <% end %>
+
         <div class="add-to-cart">
           <%= number_field_tag (@product.has_variants? ? :quantity : "variants[#{@product.master.id}]"),
             1, :class => 'title', :min => 1 %>
+
           <%= button_tag :class => 'large primary', :id => 'add-to-cart-button', :type => :submit do %>
-            <%= t(:add_to_cart) %>
+            <%= @product.subscribable? ? t(:subscribe_call_to_action) : t(:add_to_cart) %>
           <% end %>
         </div>
       </div>

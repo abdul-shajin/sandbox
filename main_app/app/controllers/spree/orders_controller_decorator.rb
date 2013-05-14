@@ -1,5 +1,26 @@
 Spree::OrdersController.class_eval do
 
+  # Shows the current incomplete order from the session
+  def edit
+    @order = current_order(true)
+    associate_user
+  end
+
+  def populate
+    populator = Spree::OrderPopulator.new(current_order(true), current_currency)
+    #Added a new parameter :line_item to add recurring period to subscribe
+    if populator.populate(params.slice(:products, :variants, :quantity,:line_item))
+      fire_event('spree.cart.add')
+      fire_event('spree.order.contents_changed')
+      respond_with(@order) do |format|
+        format.html { redirect_to cart_path }
+      end
+    else
+      flash[:error] = populator.errors.full_messages.join(" ")
+      redirect_to :back
+    end
+  end
+
   def show
     @order = Spree::Order.find_by_number!(params[:id])
     respond_to do |format|

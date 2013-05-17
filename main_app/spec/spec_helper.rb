@@ -1,5 +1,7 @@
 require 'rubygems'
 require 'spork'
+#require 'spree/core/testing_support/factories'
+#require 'spree-subscriptions/spec/factories'
 #uncomment the following line to use spork with the debugger
 #require 'spork/ext/ruby-debug'
 

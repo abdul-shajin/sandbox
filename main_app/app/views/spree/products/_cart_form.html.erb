@@ -37,7 +37,7 @@
           <div id="product-recurr-period">
                  <h6 class="product-section-title"><%= label_tag :recurring_period %></h6>
                  <div><span class="price selling" itemprop="price"> <%= text_field_tag 'line_item[duration]' , '1',:size => 3%> </span></div>
-                 <%= select_tag 'line_item[interval]', options_for_select(['Month','Year','Week','TriAnnual']) %>
+                 <%= select_tag 'line_item[interval]', options_for_select(['month','year','week','triannual'].map(&:camelize)) %>
            </div>
         <% end %>
 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130512150034) do
+ActiveRecord::Schema.define(:version => 20130517134316) do
 
   create_table "shipping_methods_zones", :id => false, :force => true do |t|
     t.integer "shipping_method_id"
@@ -175,10 +175,11 @@ ActiveRecord::Schema.define(:version => 20130512150034) do
     t.integer  "magazine_id"
     t.integer  "magazine_issue_id"
     t.string   "name"
-    t.date     "published_at"
+    t.date     "remind_at"
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
     t.datetime "shipped_at"
+    t.integer  "subscription_id"
   end
 
   add_index "spree_issues", ["magazine_id"], :name => "index_spree_issues_on_magazine_id"

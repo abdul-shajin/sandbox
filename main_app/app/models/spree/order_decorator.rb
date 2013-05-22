@@ -60,7 +60,7 @@ Spree::Order.class_eval do
     order.line_items.each do |line_item|
       if line_item.subscribable?
         p 'in create_subscriptions subscribabe'
-        subscription = Spree::Subscription.new_subscription(self, line_item)
+        Spree::Subscription.new_subscription(self, line_item)
       end
     end
   end

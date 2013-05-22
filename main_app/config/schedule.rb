@@ -22,3 +22,8 @@
 every 30.minutes do
   rake 'subscription:mailer', :environment => :development
 end
+
+#Cron to de-activate(state:inactive) subscriptions
+every :day do
+  #rake 'subsciption:state_check'
+end

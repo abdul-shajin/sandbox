@@ -71,5 +71,6 @@ end
 gem 'whenever', :require => false
 #Cron Jobs in
 gem 'delayed_job_active_record'
+gem 'daemons'
 
 #https://github.com/damianogiacomello/spree_invoice_generator (Integrated from)

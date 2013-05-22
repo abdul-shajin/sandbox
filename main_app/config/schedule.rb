@@ -27,3 +27,6 @@ end
 every :day do
   #rake 'subsciption:state_check'
 end
+every :day do
+  #rake QUEUE=mail_queue rake jobs:work
+end

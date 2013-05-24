@@ -21,4 +21,9 @@ class SubscriptionMailer < ActionMailer::Base
     mail(:to => @subscription.email, :subject => 'Reminder : Your next renew date if tomorrow')
   end
 
+  def expiry_date_notification subscription
+    @subscription = subscription
+    mail(:to => @subscription.mail, :subject => 'Reminder : Subscription expiry date is today')
+  end
+
 end

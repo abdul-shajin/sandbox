@@ -3,6 +3,14 @@ require 'subscription_mailer'
 module Spree
   module  Subscriptions
     module Notifications
+
+      def state_check
+        subscriptions = Spree::Subscription.where(:state => 'active').where('`date(expiry_date)` = ?',Date.today)
+        subscriptions.each do |sub|
+          sub.update_attribute(:state,'finished')
+          SubscriptionMailer.delay(:queue => 'mail_queue').expiry_date_notification(sub)
+        end
+      end
       #Method to run in rake task
       def all_notification
         pre_week_notification_for_month

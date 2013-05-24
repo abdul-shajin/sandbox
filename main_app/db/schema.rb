@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130522090058) do
+ActiveRecord::Schema.define(:version => 20130522160607) do
 
   create_table "delayed_jobs", :force => true do |t|
     t.integer  "priority",   :default => 0
@@ -606,6 +606,7 @@ ActiveRecord::Schema.define(:version => 20130522090058) do
     t.string   "interval"
     t.string   "duration"
     t.integer  "user_id"
+    t.datetime "expiry_date"
   end
 
   create_table "spree_tax_categories", :force => true do |t|

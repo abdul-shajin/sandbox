@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130522160607) do
+ActiveRecord::Schema.define(:version => 20130528151306) do
 
   create_table "delayed_jobs", :force => true do |t|
     t.integer  "priority",   :default => 0
@@ -365,7 +365,6 @@ ActiveRecord::Schema.define(:version => 20130522160607) do
     t.string   "meta_keywords"
     t.integer  "tax_category_id"
     t.integer  "shipping_category_id"
-    t.integer  "count_on_hand",        :default => 0
     t.datetime "created_at",                              :null => false
     t.datetime "updated_at",                              :null => false
     t.boolean  "subscribable",         :default => false
@@ -468,14 +467,13 @@ ActiveRecord::Schema.define(:version => 20130522160607) do
   create_table "spree_shipments", :force => true do |t|
     t.string   "tracking"
     t.string   "number"
-    t.decimal  "cost",               :precision => 8, :scale => 2
+    t.decimal  "cost",              :precision => 8, :scale => 2
     t.datetime "shipped_at"
     t.integer  "order_id"
-    t.integer  "shipping_method_id"
     t.integer  "address_id"
     t.string   "state"
-    t.datetime "created_at",                                       :null => false
-    t.datetime "updated_at",                                       :null => false
+    t.datetime "created_at",                                      :null => false
+    t.datetime "updated_at",                                      :null => false
     t.integer  "stock_location_id"
   end
 
@@ -521,7 +519,7 @@ ActiveRecord::Schema.define(:version => 20130522160607) do
     t.integer  "shipment_id"
     t.integer  "shipping_method_id"
     t.boolean  "selected",                                         :default => false
-    t.decimal  "cost",               :precision => 8, :scale => 2
+    t.decimal  "cost",               :precision => 8, :scale => 2, :default => 0.0
     t.datetime "created_at",                                                          :null => false
     t.datetime "updated_at",                                                          :null => false
   end
@@ -570,8 +568,8 @@ ActiveRecord::Schema.define(:version => 20130522160607) do
 
   create_table "spree_stock_locations", :force => true do |t|
     t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                               :null => false
+    t.datetime "updated_at",                               :null => false
     t.string   "address1"
     t.string   "address2"
     t.string   "city"
@@ -581,6 +579,8 @@ ActiveRecord::Schema.define(:version => 20130522160607) do
     t.string   "zipcode"
     t.string   "phone"
     t.boolean  "active"
+    t.boolean  "backorderable_default",  :default => true
+    t.boolean  "propagate_all_variants", :default => true
   end
 
   create_table "spree_stock_movements", :force => true do |t|
@@ -594,6 +594,20 @@ ActiveRecord::Schema.define(:version => 20130522160607) do
   end
 
   add_index "spree_stock_movements", ["stock_item_id"], :name => "index_spree_stock_movements_on_stock_item_id"
+
+  create_table "spree_stock_transfers", :force => true do |t|
+    t.string   "type"
+    t.string   "reference"
+    t.integer  "source_location_id"
+    t.integer  "destination_location_id"
+    t.datetime "created_at",              :null => false
+    t.datetime "updated_at",              :null => false
+    t.string   "number"
+  end
+
+  add_index "spree_stock_transfers", ["destination_location_id"], :name => "index_spree_stock_transfers_on_destination_location_id"
+  add_index "spree_stock_transfers", ["number"], :name => "index_spree_stock_transfers_on_number"
+  add_index "spree_stock_transfers", ["source_location_id"], :name => "index_spree_stock_transfers_on_source_location_id"
 
   create_table "spree_subscriptions", :force => true do |t|
     t.integer  "magazine_id"
@@ -722,9 +736,11 @@ ActiveRecord::Schema.define(:version => 20130522160607) do
     t.string   "cost_currency"
     t.integer  "position"
     t.integer  "issues_number"
+    t.string   "display_name"
   end
 
   add_index "spree_variants", ["product_id"], :name => "index_spree_variants_on_product_id"
+  add_index "spree_variants", ["sku"], :name => "index_spree_variants_on_sku"
 
   create_table "spree_zone_members", :force => true do |t|
     t.integer  "zoneable_id"
